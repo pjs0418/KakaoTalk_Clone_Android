@@ -4,15 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
 
     <FrameLayout
+        android:id="@+id/main_title_bar"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <include layout="@layout/title_bar"/>
+        <include layout="@layout/title_bar" />
 
     </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        app:layout_constraintTop_toBottomOf="@+id/main_title_bar">
+
+        <Button
+            android:id="@+id/btn_profile"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/border"
+            android:backgroundTintMode="add"
+            android:drawableLeft="@drawable/profile"
+            android:text="Jun"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:strokeColor="@color/black"
+            android:layout_marginBottom="5dp"
+            android:drawablePadding="10dp"/>
+
+        <FrameLayout
+            android:id="@+id/multi_profile"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/btn_profile">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="내 멀티프로필"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="#00ff0000"
+                android:drawableLeft="@drawable/up_arrow"
+                android:drawableTint="#666" />
+
+        </FrameLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/multi_profile"
+            android:background="@drawable/border"
+            android:drawableLeft="@drawable/plus"
+            android:text="친구별로 다른 프로필을 설정해보세요!"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:drawablePadding="10dp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
