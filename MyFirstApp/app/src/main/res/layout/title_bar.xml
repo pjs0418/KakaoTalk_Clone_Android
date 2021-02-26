@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_width="50dp"
             android:background="#00ff0000"
-            android:drawableLeft="@drawable/human"
+            android:drawableLeft="@drawable/add_human"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="@id/item_3"
